@@ -1,0 +1,29 @@
+
+.Hello {
+color: blue;
+}
+
+#Id{
+
+    color: blueviolet;
+}
+html{
+    font-size: 32px;
+}
+section .title{
+    font-size: 0.9em;
+    text-align: center;
+}
+section ul{
+    font-size: 1.5em;
+}
+section .longText{
+    font-size: 1.2rem;
+    text-shadow: 2px 2px 3px grey;
+    outline: 4px solid grey;
+    background-color: cornflowerblue;
+
+    /* 
+    overflow: hidden;
+    text-overflow: ellipsis; */
+}
