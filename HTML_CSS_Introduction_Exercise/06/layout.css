@@ -1,0 +1,40 @@
+
+.header-nav {
+    display: flex;
+    gap: 20px;
+    
+    
+}
+.header-nav li{
+    justify-content: space-around;
+    border: 1px solid green;
+    padding: auto;
+    padding: 5px 8px;
+   border-radius: 5px;
+}
+li{
+    list-style-type: none;
+  
+}
+a{
+    text-decoration: none;
+}
+@media(width <= 400px){
+    p{
+        background-color: lightblue
+    }
+    .header-nav {
+        flex-direction: column;
+        gap: 0;
+
+    }
+    .header-nav li {
+        text-align: center;
+    }
+    h1,h2,h3{
+        text-align: center;
+    }
+    .link{
+        display: none;
+    }
+}
