@@ -1,0 +1,85 @@
+
+*,*::after,*::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    background-color: lightgrey;
+    padding: 15px;
+}
+
+
+.card{
+    position: relative;
+    
+    margin: 0 auto;
+    width: 350px;
+    height: 70vh;
+    
+    margin-top: 100px;
+    
+    border-radius: 8px;
+    background-color: white;
+
+    box-shadow: 0px 4px 10px rgba(30,30,30,0.4);
+    border: solid 1px lightgray ;
+   
+}
+
+.card img{
+
+ width: 100%;
+ height: 100%;
+object-fit: cover;
+object-position: center;
+}
+.card .imgContainer{
+     height: 150px;
+}
+
+.card .info{
+ padding: 10px 16px;
+
+}
+.card .info .desc{
+    font-size: 18px;
+    position: relative;
+ margin :10px 0 5px 0;
+ top: 10px;
+
+}
+
+
+.card .info .link{
+    
+
+font-size: 16.3px;
+
+color: black;
+text-decoration: none;
+
+
+display: block;
+font-style: italic;
+text-overflow: ellipsis;
+overflow: hidden;
+white-space: nowrap;
+
+ 
+
+}
+.footer{
+position:relative;
+top: 45px;
+
+}
+.card .info .website{
+color: black;
+font-weight: bold;
+display: block;
+
+}
+
+

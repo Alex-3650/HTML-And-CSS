@@ -1,0 +1,37 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.accordion{
+
+    border: 3px solid lightgray;
+    max-width: 90ch;
+    margin: 30px auto;
+
+}
+.accordion p:first-of-type{
+    border-top: 3px solid lightgray;
+    
+}
+
+details >p{
+    margin-top:10px;
+}
+details>p:not(:last-child){
+    margin-bottom:20px;
+}
+details{
+    padding: 1.3em;
+}
+
+details:not(:last-child){
+    border-bottom:2px solid lightgray;
+}
+    
+.accordion::details-content{
+  padding-block: 2em; 
+  padding-inline: 2;
+    
+}

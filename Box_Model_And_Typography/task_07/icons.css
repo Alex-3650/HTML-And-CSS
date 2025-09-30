@@ -1,0 +1,35 @@
+
+.buttons{
+    list-style: none;
+    
+}
+
+.buttons .item{
+    display: inline-block;
+     margin-right: 15px; 
+    /* margin-left: 5px; */
+ 
+}
+
+.buttons .item .btn{
+    position: relative;
+
+    border-radius: 100%;
+   
+    width: 45px;
+   
+   aspect-ratio: 1/1;
+   font-size: 25px;
+   
+
+}
+*{
+    text-align: center;
+}
+.buttons .item .btn i{
+
+    position:absolute;
+     /* top: 48%;
+     bottom: 0%; */
+     transform: translate(-50%,-50%);
+}     
