@@ -75,6 +75,7 @@ display: none;
 .section.site-header nav ul li a:hover,
 .section.site-header li:hover>a{
    transition: color 1s;
+
    background-color: #369;
    color: white;
    scale: 0.89;

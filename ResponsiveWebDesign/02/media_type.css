@@ -1,0 +1,77 @@
+@media all {
+   * {
+       padding: 0;
+       margin: 0;
+       box-sizing: border-box;
+   }
+   
+   body {
+       padding: 2em;
+       font: 14px/1.5 Lato, sans-serif;
+   }    
+   
+   p {
+       padding-bottom: 1.5em;
+   }
+   h2{
+    margin-top: 0.5em;
+}
+pre{
+    background: #eee;
+    padding: 0.2em;
+    border-radius: 0.3em;
+    width: 570px;
+    color: #333;
+}
+body::before{
+ padding: 1em 1.4em;
+ color: #fff;
+ margin-bottom: 1.5em;
+ border-radius: 0.3em;
+}
+   
+
+}
+
+@media (hover: none) {
+   body::before {
+   display: block;
+   content: 'This device doesnt support hover';
+   background: #369;
+}
+}
+@media (hover: hover) {
+   body::before {
+   display: block;
+   content: 'This device does support hover';
+   background: #583;
+}
+}
+@media (orientation: landscape) {
+   body::before {
+   display: block;
+   content: 'The device is in landscape orientation';
+   background: #369;
+   }
+}
+@media (orientation: portrait) {
+   body::before {
+   display: block;
+   content: 'The device is in portrait orientation';
+   background: #583;
+   }
+}
+@media ( min-width: 600px) {
+   body::before {
+   display: block;
+   content: 'The viewport width is over 600px';
+   background-color: #713;
+   }
+}
+@media ( min-height: 600px) {
+   body::before {
+   display: block;
+   content: 'The viewport height is over 600px';
+   background-color: #433;
+   }
+}

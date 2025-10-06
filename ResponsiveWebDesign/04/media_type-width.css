@@ -1,0 +1,56 @@
+@media all {
+   * {
+       padding: 0;
+       margin: 0;
+       box-sizing: border-box;
+   }
+   
+   body {
+       padding: 2em;
+       font: 14px/1.5 Lato, sans-serif;
+   }    
+   
+   p {
+       padding-bottom: 1.5em;
+   }
+   h2{
+    margin-top: 0.5em;
+}
+pre{
+    background: #eee;
+    padding: 0.2em;
+    border-radius: 0.3em;
+    width: 570px;
+    color: #333;
+}
+body::before{
+ padding: 1em 1.4em;
+ color: #fff;
+ margin-bottom: 1.5em;
+ border-radius: 0.3em;
+}
+   
+
+}
+
+@media (width: 800px) {
+body::before {
+display: block;
+content: 'The viewport width is exactly 800px';
+background: #369;
+}
+} 
+@media (min-width: 800px) {
+body::before {
+display: block;
+content: 'The viewport width is larger than 800px';
+background: #756;
+}
+}  
+@media (max-width: 800px) {
+body::before {
+display: block;
+content: 'The viewport width is smaller than 800px';
+background: #357
+}
+}   

@@ -1,0 +1,108 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html{
+   font-family: "Nunito Sans", sans-serif;
+   font-size: 14px;
+   line-height: 1.4;
+}
+body{
+    background-color: aliceblue;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+}
+
+.keyboard{
+   --spacing:0.8em;
+    border: 2px solid #AAA;
+    border-radius: 0.4em;
+    padding: 1em 1.3em;
+    background: #DDD;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing);
+    box-shadow:  0 0.15em 0 rgb(0, 0 ,0 ,0.3) ;
+}
+
+
+.keyboard .row{
+display: flex;
+gap: 1em;
+}
+.key{
+    background: #FFF;
+    flex: 1 1 auto;
+    text-align: center;
+    border: 1px solid lightgray ;
+    border-radius: 0.3em;
+    padding: 1.2em;
+    box-shadow:  0 0.15em 0 rgb(0, 0 ,0 ,0.2) ;
+    cursor: pointer;
+    position: relative;
+}
+.key:active{
+   box-shadow: none;
+   top:0.1em;
+   background: #eee;
+}
+ .special{
+    background: #EEE;
+}
+
+
+
+.keyboard .row:nth-child(4){
+ padding-right: 4.5em;
+}
+
+.key:not(.special){
+    flex-basis: 3ch;
+}
+.key.enter::after{
+ display: block;
+ content:'';
+ width: 4.5ch;
+ aspect-ratio: 1;
+ position: absolute;
+ top: calc(100%);
+ right: -1px;
+ width: 7ch;
+ height: 7.9ch;
+ background: inherit; ;
+ border: 1px solid lightgray ;
+ border-top:none;
+ 
+border-radius: inherit;
+border-top-right-radius: 0;
+ border-top-left-radius: 0;
+box-shadow: inherit;
+ cursor: pointer;
+    
+}
+.key.enter{
+    border-bottom-right-radius: 0;
+}
+.keyboard .row:nth-child(1).key{
+    padding-block: 0.3em;
+}
+.key.space{
+    
+    flex-basis: 40%;
+}
+
+.key{
+    padding: 1em 1.3em ;
+}
+
+.row:nth-child(1)>*{
+   padding: 0.3em 0.5em;
+   
+}
+
+
