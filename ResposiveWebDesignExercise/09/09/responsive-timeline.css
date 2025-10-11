@@ -1,0 +1,110 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito+Sans:opsz,wdth,wght@6..12,106.9,200..1000&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+    background: #eee;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    font:14px/1.5 Lato, sans-serif;
+}
+body>*{
+    width: 80%;
+  
+}
+
+.timeline{
+    border:1px solid #ccc;
+    border-radius: 0.3em;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    position: relative;
+    
+   
+}
+.timeline::before{
+    display: block;
+    content: '';
+    width: 1.4px;
+    
+    background: #ccc;
+    position: absolute;
+    left: 3.15em;
+    top:2em;
+    bottom: 0;
+}
+.timeline>h2{
+   
+    background: #fff;
+    color: black;
+    border-radius: 0.3rem;
+    padding: 0.5rem 0.7rem;
+    box-shadow: 0 0 1em 0 rgb(0, 0, 0,0.1);
+    margin-bottom: 2rem;
+    position: relative;
+}
+.timeline>article{
+ display: flex;
+ align-items: start;
+ gap: 1.5em;
+}
+.timeline>article .inner{
+    background: #fff;
+    color: black;
+    border-radius: 0.3rem;
+    padding: 0.8rem 1rem;
+    box-shadow: 0 0 1em 0 rgb(0, 0, 0,0.1);
+    flex: 1 1 auto;
+   
+}
+.timeline>article:nth-of-type(odd)::before{
+       background: orange
+}
+.timeline>article::before{
+    display: block;
+    content: '';
+    width: 1em;
+    aspect-ratio: 1;
+    background: limegreen;
+    border-radius: 50%;
+    flex: 0 0 2em;
+    border: 2px solid #fff;
+    box-shadow:0 0 1em 0 rgb(0, 0, 0,0.1);
+    position: relative;
+}
+@media (width>100ch){
+    .timeline article{
+        width: calc(50% + 1.1em);
+
+    }
+    .timeline{
+     margin: 0 auto;
+    }
+    .timeline>h2{
+        text-align: center;
+        padding: 0.7rem 0.9rem;
+    }
+    
+    .timeline article:nth-of-type(odd){
+        margin-left: auto;
+    }
+    .timeline article:nth-of-type(even)::before{
+        order:999;
+    }
+    .timeline::before{
+        left: 50%;
+    }
+    .timeline article:nth-of-type(even).inner{
+        text-align: right;
+    }
+}

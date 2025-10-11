@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito+Sans:opsz,wdth,wght@6..12,106.9,200..1000&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: #eee;
+    padding: 2em;
+    font:14px/1.5 Lato, sans-serif;
+}
+
+
+
+.section{
+
+   max-width:800px;
+   display: flex;
+   gap: 1em;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 0.3em;
+    padding: 1.9em 1.6em;
+    box-shadow: 0 0 1.2em 0 rgb(0,0,0,0.3em);   
+    margin: 0 auto;
+    max-height: 700px;
+}
+
+.head{
+    display: flex;
+    flex-direction: column;
+    gap:0.5em;
+}
+ 
+.main{
+    display: flex;
+    flex-direction: column;
+   gap: 0.7em;
+    flex:1 1 70%;
+}
+.aside{
+      background: #eee;
+    border: 1px solid #ccc;
+    border-radius: 0.3em;
+    flex: 0 0  25ch;
+    overflow: hidden;
+    display: flex;
+   align-items: stretch;
+
+}
+.aside img{
+    object-fit: cover;
+     height: auto; 
+    width: 100%;
+}
+
+.text{
+    max-width: 70ch;
+    font-size: 16px;
+}
+.cta>*{
+     display: inline-block;
+    border: none;
+    background: purple;
+    color: #fff;
+    text-decoration: none;
+    outline: none;
+    padding: 0.5em 1.2em;
+    border-radius: 0.3em;
+    cursor: pointer;
+    position: relative;
+}
+.primarily{
+    margin-right: 1.3em;
+}
+.cta>*:hover {
+    background: orange;
+}
+.cta>*:focus-visible {
+    outline: 2px solid orange;
+    outline-offset: 2px;
+}
+.cta .secondary {
+    background: #DDD;
+    color: #666;
+}
+.cta>*:active,
+.secondary:active {
+    background: #000;
+    color: #fff;
+    top: 1px;
+}
+body:has(.cta>*:focus-visible) .cta>*:not(:focus-visible) {
+    opacity: 0.4;
+}
+h3{
+    font-size: 23px;
+    opacity: 0.6;
+}
+  
+h2{
+    font-size: 30px;
+    margin-top: 0;
+}
+@media (width<650px) {
+    .section{
+        flex-direction: column;
+    }
+    .aside{
+        order: -1;
+    }
+    .aside img{
+          object-position: 50% 25%;
+    }
+
+}
+
+
