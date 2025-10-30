@@ -1,0 +1,174 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito+Sans:opsz,wdth,wght@6..12,106.9,200..1000&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font: 14px/1.5 Lato, sans-serif;
+}
+
+body,textarea,select,option,input{
+    font: inherit;
+}
+
+body{
+    background: #eee;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4em;
+}
+
+body > *{
+    width: 100%;
+
+}
+form{
+    min-width: 35ch;
+    max-width: 45ch;
+      background: #fff;
+      border-radius: 0.3em;
+      box-shadow: 0 0 1em 0 rgb(0, 0, 0);
+      padding: 2em;
+     margin: 0 auto;
+       
+  }
+
+fieldset{
+ border: none;
+ display: flex;
+ flex-direction: column;
+ width: 100%;
+ 
+padding: 1em;
+ 
+ 
+ legend{
+    font-weight: bold;
+    font-size: 1.8em;
+    &::after{
+        display: block;
+        content: '';
+        background: grey;
+        opacity: 0.6;
+        width: 100%;
+        height: 2px;
+        margin-top: 1em;
+    } 
+ }
+}
+.field{
+    --clr-valid:#0C0;
+    --clr-invalid:#C00;
+    --clr-border:#ccc;
+    --clr-label:#000;
+    
+    
+    
+    padding-bottom: 1.5em;
+
+    &>label{
+        font-weight: bold;
+       display: block;
+       font-size: 1.2em;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    textarea
+    {
+       border: 2px solid --clr-border;
+       padding:0.7em 1em;
+       border-radius: 0.3em;
+       display: block;
+       width: 100%;
+       outline: none;
+
+      &:focus{
+        border: none;
+      }
+    }
+
+    &:has(:required) > label{
+        &::after
+        {
+          display: inline-block;
+          content: '*';
+          color: var(--clr-invalid);
+          margin-left: 0.3em;
+        }
+      
+    }
+
+      button,
+      input[type="button"],
+      input[type="submit"]
+      {
+    margin-top: 1em;
+       display: block;
+       width: 100%;
+       text-align: center;
+       border: none;
+       border-radius: 0.3em;
+       background: orange;
+       color: white;
+       padding:0.7em 1em;
+       outline: none;
+
+       &:focus{
+           border: var(--clr-border);
+       }
+    }
+
+    input,
+    button{
+        &:focus-visible{
+            outline: 2px solid orange;
+             outline-offset: 1px; 
+        }
+    }
+
+   .info{
+    font-size: 0.9em;
+    opacity: 0.6;
+    font-style: italic;
+   
+   }
+   &:has(:user-invalid){
+    --clr-border:var(--clr-invalid);
+   
+   }
+    &:has(:user-valid){
+        --clr-border:var(--clr-valid);
+       
+    }
+}
+
+.field.icon{
+
+    position: relative;
+      &::before{
+        
+        display: block;
+        font-family: "Font Awesome 7 Free";
+        font-weight: 900;
+        position: absolute;
+       top: 0;
+        right: 0;     
+    }  
+
+   &:has(#login-email)::before{
+    content: '\f0e0';
+   }
+
+   &:has(#login-password)::before{
+    content: '\f084';
+   }
+
+}
+

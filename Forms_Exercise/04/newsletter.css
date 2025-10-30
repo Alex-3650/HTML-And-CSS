@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito+Sans:opsz,wdth,wght@6..12,106.9,200..1000&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font: 14px/1.5 Lato, sans-serif;
+}
+
+body,textarea,select,option,input{
+    font: inherit;
+}
+body{
+ 
+    height: 100vh;
+    padding: 2em;
+    background: #abaaaa;
+      
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    margin: 2em;
+ 
+    padding: 1em;
+   display: flex;
+   flex-direction: column;
+   width: 90ch;
+   gap: 1em;
+   border-radius:0.3em;
+   background-color:white;
+   box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.1em);
+  
+  
+   
+
+   h2{
+    display: inline-block;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+    font-size: 30px;
+    &::after{
+        display: block;
+        content: '';
+        background: grey;
+        opacity: 0.6;
+        width: 5ch;
+        height: 2px;
+        margin-top: 0.4em;
+    } 
+   }
+   .submit{ 
+       padding: 0.5em 0.8em;
+       border: none;
+       border-radius: 0.3em;
+        font-weight: bold;
+        font-size: 17px;
+       
+      }
+   .field{
+    
+    padding-bottom: 1.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
+    position: relative;
+
+    &>label{
+        font-weight: bold;
+        
+    }
+    &.required:has(:user-invalid){
+            color: red;
+            border-color: red;
+        }
+         &.required:has(:user-valid){
+            color: green;
+            border-color: green;
+        }
+        
+
+
+    textarea,input{  
+        border: none;
+        border-bottom: 2px solid rgb(212, 212, 212);;
+        padding: 0.5rem 0.8rem;
+        outline: none;
+    }
+    &:focus{
+        border-color: rgb(212, 212, 212,0.6); ;
+    }
+     ul{   
+         display: flex;  
+         flex-direction: column;
+         gap: 0.3em;
+         margin-block: 0.5em ;
+         padding-left: 0;
+        li{
+             display: flex;
+             align-items: center;
+             gap: 0.5em;
+             padding: 0;
+             list-style: none;
+             
+           }
+     
+      
+         input[type="radio"]{
+            appearance: none;
+            width: 1.5em;
+            aspect-ratio: 1;
+            border: 2px solid #ccc;
+            border-radius: 50%;
+            position: relative;
+            &:focus{
+              border: 2px solid  darkblue;
+            }
+        
+            
+            &::before{
+                   display: block;
+                   content: '';
+                   position: absolute;
+                   inset: 0.2em;
+                   border-radius: inherit;
+                   background: lightblue;
+                   opacity: 0;
+                   transition: opacity 0.3s  ease-in;
+            }
+            &:checked::before{
+                    opacity: 1;
+                   }
+            
+        }        
+      }
+      input[type="checkbox"]{
+            appearance: none;
+            width: 3em;
+            aspect-ratio: 3/1.5;
+            border: 2px solid  rgb(212, 212, 212);
+            border-radius: 1em;
+            position: relative;
+            overflow: hidden;
+            transition: 
+            background-color 0.3s  ease-in,
+            border-color 0.3s  ease-in;
+
+            &:focus{
+              border: 2px solid  darkblue;
+            }
+            
+           
+            &::before{
+                   display: block;
+                   content: '';
+                   position: absolute;
+                   width: 1em;
+                   height: 1em;
+                   border-radius: inherit;
+                   background: #ADD8E6;
+                  
+                  
+                   transition: background-color 0.5s  ease-in,
+                   left 0.3s  ease-in;
+                   aspect-ratio: 1;
+                   top: 0.1em;
+                   left: 0.1em;
+                  
+            }
+            &:checked{
+             background: #e8edf6;
+          
+               &::before
+               {
+                 left:1.5em;
+                }
+            }            
+         }
+         input[type="radio"],
+         input[type="checkbox"]{
+            &:focus + label{
+                font-weight: bold;
+                color: orange;
+            }
+            &:checked + label{
+                font-weight: bold;
+                color: darkblue;
+                 opacity: 1;
+            }
+             
+        } 
+        
+        
+        
+       
+       
+
+   }
+
+  .info{
+        font-style: italic;
+        opacity: 0.6;
+        }
+}
+
+
+
+.field{
+
+    &.floating-label{
+
+     & > label{
+        position: absolute;
+        font-weight: bold;
+        padding: 0.5rem 0;
+        font-size: 0.9em;
+        translate: 0 -50%;
+        transition: translate 0.3s ease-in;
+        pointer-events: none; 
+
+        
+     } 
+
+      input,
+      textarea{
+        border: none;
+        border-bottom: 2px solid lightgray;
+        padding: 0.5rem 0.8em;
+        outline: none;
+
+        &::placeholder{
+           color: transparent;
+        }
+
+      }
+      
+
+      &:has(:placeholder-shown) > label{
+        translate: 0;
+      }
+
+    }
+
+  }
+
+ 
+
+

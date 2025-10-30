@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+    <div class="login">
+         <header>
+        <h1>Login</h1>
+        </header>
+
+      <form action="#" method="get">
+
+       <div class="login-wrapper">
+         <label for="username-login">Username</label>
+         <div class="input-wrapper">
+            <input type="text" name="username-login" id="username-login"  required>
+       </div>
+       
+        </div>
+
+       <div class="login-wrapper">
+         <label for="password-login">Password</label>
+         <div class="input-wrapper">
+        <input type="password" name="password-login" id="password-login" required>
+       </div>
+    </div>
+
+       <div class="login-wrapper">
+         <label for="email-login" class="email">Email</label>
+         <div class="input-wrapper">
+        <input type="email" name="email-login" id="email-login" pattern=".+@example\.com" >
+       </div>
+    </div>
+
+    <button class="submit">Submit</button>
+      </form>
+    </div>
+
+
+    
+</body>
+</html>

@@ -1,0 +1,42 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+body>*{
+    width: 100%;
+}
+
+.section{
+    &.bgrd-img{
+        background-image: url("./images/poster.jpg");
+        background-repeat:no-repeat ;
+        background-position: center center ;
+        background-size: cover; 
+    }
+    &.bgrd-dark{
+     background-color: #E14747;
+     color: white;
+    }
+    &.bgrd-light{
+        background-color: #F8F0E9;
+        color: black;
+
+    }
+    &.section-footer{
+    background-color: #352B2A;
+    }
+    .inner{
+       max-width: 1100px;
+       margin: 0 auto;
+    }
+}

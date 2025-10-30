@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter</title>
+    <link rel="stylesheet" href="./newsletter.css">
+</head>
+<body>
+  
+    <form action="#" class="login">
+       <h2>Login</h2>
+
+     <div class="field floating-label required">
+      
+       <label for="login-email">Email</label>
+       <input type="email" name="login-email" id="login-email" placeholder="Email" required> 
+       
+       <div class="field-wrapper">
+        <span class="info">Example:john.doe@gmail.com</span>
+       </div>
+     </div>  
+     
+     <div class="field floating-label required">
+      
+       <label for="login-password">Password</label>
+       <input type="password" name="login-password" id="login-password" placeholder="Password" required>
+      
+       <div class="field-wrapper">
+        <span class="info">Minimum 6 characters, letters and numbers. at least 1 specail character!</span>
+       </div>
+     </div> 
+
+     <div class="field floating-label">
+       <label for="login-message">Message</label>
+       <textarea name="login-message" id="login-message" placeholder="Message"></textarea>
+       <div class="field-wrapper">
+        <span class="info">Enter any specific information we need to know.</span>
+       </div>
+     </div> 
+
+
+     <div class="field custom">
+       <label for="login-choice">Make the correct choice.</label>
+       <ul>
+         <li> <input type="radio" name="login-choices" value="1" id="login-choice-1"><label class="label1">Unique</label> </li> 
+         <li> <input type="radio" name="login-choices" value="2" id="login-choice-2"><label class="label1">Good</label> </li>
+         <li> <input type="radio" name="login-choices" value="3" id="login-choice-3"><label class="label1">Bad</label> </li>
+       </ul>
+     </div>
+
+      <div class="field custom">
+       <label for="login-choice">Make the correct choice.</label>
+       <ul>
+         <li> <input type="checkbox" name="login-checkbox-1" id="login-check-1"><label class="check-label">Unique</label> </li> 
+         <li> <input type="checkbox" name="login-checkbox-2" id="login-check-2"><label class="check-label">Good</label> </li>
+         <li> <input type="checkbox" name="login-checkbox-3" id="login-check-3"><label class="check-label">Bad</label> </li>
+       </ul>
+     </div>
+
+     <input type="submit" value="Login" class="submit">
+     
+
+    </form>
+
+    
+</body>
+</html>

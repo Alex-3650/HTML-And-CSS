@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #D4D4D4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     height: 100vh; 
+   font-family: 'Space Mono', monospace;
+}
+body>*{
+    width: 100%;
+    font-family: inherit;
+}
+
+.card{
+    margin: auto;
+    border: 4px solid black;
+    border-radius: 2em;
+    max-width: 400px;
+    box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 1);
+   
+    overflow: hidden;
+
+     .card-header{
+        min-height: 180px;
+        background-color: #EE1414;
+        border-bottom:4px solid black; 
+        
+     }
+      .inner{
+        background-color: #fff;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        gap: 0.4em;
+         h1{
+            font-size: 1.5em;
+            
+         }
+         h3{
+            font-size: 1em;
+            opacity: 0.6;
+         }
+         p{
+            text-align: center;
+            margin-top: 0.3em;
+            border: 2px  dashed black;
+          max-width: 280px;
+          font-size: 0.9em;
+          padding: 0.5em 0.7em;
+         }
+         a{
+            font-size: 1.1em;
+            margin: 1em 0 2em 0;
+            text-decoration: none;
+            color: white;
+            border: 2px solid black;
+            background-color: #0DA52B;
+            padding: 0.5em 0.7em;
+             box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
+             text-shadow: 2px 2px 0px #000;
+         }
+      }
+
+    .profile-img{
+       margin-top: -15%;
+     
+        height: 120px;
+        width: 120px;
+       border: 5px solid white;
+       outline: 4px solid black;
+     
+    }
+}
